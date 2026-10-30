@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-color: #ffffff;
+    --black-color: #080808;
+    --red-color: #E80808;
+    --yellow-color: #F8F818;
+    --darkred-color: #B80808;
+}
+@font-face {
+    font-family: 'bangal';
+    src: url(./FONT/ARIALN.TTF);
+    font-display: swap;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--black-color) url(./pic/db6406f827d86d7e755cf616592f307e.webp) no-repeat center / cover fixed;
+    font-family: 'bangal', Arial, sans-serif;
+}
+.main{
+    width: min(90%, 480px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.profile{
+    width: clamp(110px, 32vw, 160px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: var(--yellow-color) solid 1px;
+}
+.title-ID{
+    color: var(--yellow-color);
+    font-family: 'bangal', Arial, sans-serif;
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.tag{
+    width: 100%;
+    min-height: 4.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--white-color);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+}
+.logo{
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.shorter{
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+}
+.infor{
+    flex: 1;
+    padding: 0.8rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'bangal', Arial, sans-serif;
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    color: var(--black-color);
+}
+.infor:focus-visible{
+    outline: 2px solid var(--darkred-color);
+    outline-offset: 2px;
+    border-radius: 1rem;
+}
+
+@media (max-width: 360px){
+    .main{ gap: 1.25rem; padding: 1.25rem 0; }
+    .tag{ min-height: 4rem; padding: 0.5rem 0.75rem; }
+    .logo{ width: 40px; height: 40px; }
+    .shorter{ width: 34px; height: 34px; }
+}
