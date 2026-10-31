@@ -12,13 +12,16 @@
 }
 @font-face {
     font-family: 'bangal';
-    src: url(./FONT/ARIALN.TTF);
+    src: url(./FONT/BYekan.ttf);
     font-display: swap;
 }
 
 body{
     min-height: 100vh;
-    background: var(--black-color) url(./pic/db6406f827d86d7e755cf616592f307e.webp) no-repeat center / cover fixed;
+    background: linear-gradient(180deg, var(--black-color),var(--darkred-color)); 
+    -webkit-background-clip: text; 
+     background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
     font-family: 'bangal', Arial, sans-serif;
 }
 .main{
@@ -34,6 +37,8 @@ body{
 }
 .info{
     width: 100%;
+    height: 40vh;
+    /* background: darkblue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,21 +46,31 @@ body{
     gap: 1rem;
 }
 .profile{
-    width: clamp(110px, 32vw, 160px);
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    border: var(--yellow-color) solid 1px;
+   width: 90%;
+   height: 35%;
+   box-shadow: 100px 10px 1000000px var(--black-color);
 }
 .title-ID{
     color: var(--yellow-color);
     font-family: 'bangal', Arial, sans-serif;
-    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    font-size: 50px;
+    margin-top: 35px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.bo{
+    color: var(--darkred-color);
+}
+.id-p{
+    color: var(--white-color);
+    font-family: 'bangal', Arial, sans-serif;
+    font-size: 20px;
     text-align: center;
     overflow-wrap: anywhere;
 }
 .links{
     width: 100%;
+    /* background: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
